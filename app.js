@@ -55,6 +55,7 @@ app.use(passport.session());
 
 // require('./lib/passport/passport')(passport);
 
+//Make user object available for all EJS files 
 app.use(function(req, res, next) {
     res.locals.user         =   req.user;
 
