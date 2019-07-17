@@ -53,7 +53,7 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-// require('./lib/passport/passport')(passport);
+require('./lib/passport/passport')(passport);
 
 //Make user object available for all EJS files 
 app.use(function(req, res, next) {
@@ -66,23 +66,23 @@ app.use(function(req, res, next) {
     next();
 });
 
-// app.use(expressValidator({
-//     errorFormatter: function(param, message, value) {
-//         let namespace   = param.split('.');
-//         let root        = namespace.shift();
-//         let formParam   = root;
+app.use(expressValidator({
+    errorFormatter: function(param, message, value) {
+        let namespace   = param.split('.');
+        let root        = namespace.shift();
+        let formParam   = root;
         
-//         while (namespace.length) {
-//             formParam += '[' + namespace.shift() + ']';
-//         }
+        while (namespace.length) {
+            formParam += '[' + namespace.shift() + ']';
+        }
 
-//         return {
-//             param:      formParam,
-//             message:    message,
-//             value:      value
-//         }
-//     }
-// }));
+        return {
+            param:      formParam,
+            message:    message,
+            value:      value
+        }
+    }
+}));
 
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
