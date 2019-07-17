@@ -36,6 +36,12 @@ router.post('/signin', passport.authenticate('local-login', {
     failureFlash: true
 }))
 
+router.get('/logout', function (req, res, next) {
+    req.logout()
+
+    res.redirect('/')
+})
+
 /* Edit-Profile */
 router.get('/edit-profile', function (req, res) {
     if(!req.isAuthenticated()) res.redirect('/api/users/signin')
