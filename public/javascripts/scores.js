@@ -1,6 +1,6 @@
 let d = new Date();
 let newDay = d.getDate();
-let newString = "0"+newDay;
+let newString = newDay;
 console.log(newString)
 
 window.onload = function () {
@@ -25,10 +25,10 @@ function init(){
         }
 
         httpRequest.onreadystatechange = processContents
-        httpRequest.open("GET", `http://gd.mlb.com/components/game/mlb/year_${d.getFullYear()}/month_06/day_${newString}/master_scoreboard.json`
+        httpRequest.open("GET", `http://gd.mlb.com/components/game/mlb/year_${d.getFullYear()}/month_07/day_${newString}/master_scoreboard.json`
         )
         httpRequest.send()
-        // console.log(` `, httpRequest);
+        console.log(` `, httpRequest);
         
         
 
@@ -38,7 +38,7 @@ function init(){
     
     function newDateNext() {
         newDay=newDay+1;
-        newString = "0"+newDay;
+        newString = newDay;
 
         document.getElementById("#primary").innerHTML = newDay;
     
@@ -48,7 +48,7 @@ function init(){
 
     function newDatePrevious() {
         newDay=newDay-1;
-        newString = "0"+newDay;
+        newString = newDay;
         
         document.getElementById("#primary").innerHTML = newDay;
 
