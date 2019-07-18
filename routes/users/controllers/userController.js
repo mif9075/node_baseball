@@ -1,11 +1,11 @@
-let User    = require('../models/User');
-let bcrypt  = require('bcryptjs');
-let gravatar= require('../utils/gravatar')
+const User   = require('../models/User')
+const bcrypt = require('bcryptjs')
+const gravatar = require('../utils/gravatar')
 
 module.exports = {
     signup: (req, res, next) => {
-        let errorValidate = req.validationErrors();
-        
+        let errorValidate = req.validationErrors()
+
         if (errorValidate) {
             res.render('auth/signup', { error_msg: true, errorValidate: errorValidate, errors: [] })
 
@@ -19,49 +19,49 @@ module.exports = {
 
                     return res.redirect(301, '/api/users/signup')
                 } else {
-                    let newUser = new User;
+                    const newUser = new User
 
-                    newUser.email           = req.body.email;
-                    newUser.password        = req.body.password;
-                    newUser.profile.name    = req.body.name;
-                    newUser.profile.picture = gravatar(req.body.email);
-                
-                bcrypt.genSalt(10, (error, salt) => {
-                    if (salt) {
-                        bcrypt.hash(newUser.password, salt, (error, hash) => {
-                            if (error) throw error; 
+                    newUser.email           = req.body.email
+                    newUser.password        = req.body.password
+                    newUser.profile.name    = req.body.name
+                    newUser.profile.picture = gravatar(req.body.email)
 
-                            newUser.password = hash;
+                    bcrypt.genSalt(10, (error, salt) => {
+                        if (salt) {
+                            bcrypt.hash(newUser.password, salt, (error, hash) => {
+                                if (error) throw error
 
-                            newUser.save()
-                                .then( user => {
-                                    req.logIn(user, (error) => {
-                                        if (error) {
-                                            res.status(400).json({
-                                                confirmation: false,
-                                                message: error
+                                newUser.password = hash
+
+                                newUser.save()
+                                        .then( user => {
+                                            req.logIn(user, (error) => {
+                                                if (error) {
+                                                    res.status(400).json({
+                                                        confirmation: false,
+                                                        message: error
+                                                    })
+                                                } else {
+                                                    res.redirect('/api/users/signup')
+                                                }
                                             })
-                                        } else {
-                                            next()
-                                        }
-                                    })
-                                })
-                                .catch( error => {
-                                    req.flash('errors', error)
+                                        })
+                                        .catch( error => {
+                                            req.flash('errors', error)
 
-                                    return res.redirect(301, '/api/users/signup')
-                                })
-                        })
-                    } else {
-                        throw error
-                    }
-                })
+                                            return res.redirect(301, '/api/users/signup')
+                                        })
+                            })
+                        } else {
+                            throw error
+                        }
+                    })
                 }
             })
     },
     updateProfile: function (params, id) {
         return new Promise((resolve, reject) => {
-            User.findOne({ _id: id})
+            User.findOne({ _id: id })
                 .then(user => {
                     if (params.name) user.profile.name = params.name
                     if (params.address)   user.address = params.address
@@ -70,10 +70,10 @@ module.exports = {
                     if (params.password) {
                         bcrypt.genSalt(10, (error, salt) => {
                             bcrypt.hash(params.password, salt, (error, hash) => {
-                                if(error) {
+                                if (error) {
                                     let errors = {}
-                                    errors.message = error;
-                                    error.status = 400
+                                    errors.message = error
+                                    error.status   = 400
 
                                     reject(errors)
                                 } else {
@@ -83,10 +83,10 @@ module.exports = {
                                         .then(user => {
                                             resolve(user)
                                         })
-                                        .catch(error => {
+                                        .catch(error =>{
                                             let errors = {}
-                                            errors.message = error;
-                                            errors.status = 400
+                                            errors.message = error
+                                            errors.status  = 400
 
                                             reject(errors)
                                         })
@@ -100,8 +100,8 @@ module.exports = {
                             })
                             .catch(error =>{
                                 let errors = {}
-                                errors.message = error;
-                                errors.status = 400
+                                errors.message = error
+                                errors.status  = 400
 
                                 reject(errors)
                             })

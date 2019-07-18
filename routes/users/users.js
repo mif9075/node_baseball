@@ -3,7 +3,7 @@ let router      = express.Router();
 let passport    = require('passport');
 
 let userController      = require('../users/controllers/userController');
-let signupValidation    = require('./utils/userValidation');
+let signupValidation    = require('./utils/signupValidation');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
