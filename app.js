@@ -12,7 +12,7 @@ let indexRouter     = require('./routes/index');
 // let cartRouter      = require('./routes/cart/cart');
 let usersRouter     = require('./routes/users/users');
 // let adminRouter     = require('./routes/admin/admin');
-// let playerRouter    = require('./routes/player/player');
+let playerRouter    = require('./routes/player/player');
 
 let flash           = require('connect-flash');
 let session         = require('express-session');
@@ -91,7 +91,7 @@ app.use('/',            indexRouter);
 // app.use('/api/cart',    cartRouter);
 app.use('/api/users',   usersRouter);
 // app.use('/api/admin',   adminRouter);
-// app.use('/api/player', playerRouter);
+app.use('/api/player', playerRouter);
 
 
 // catch 404 and forward to error handler
