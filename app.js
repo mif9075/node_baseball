@@ -71,6 +71,8 @@ app.use(function(req, res, next) {
     next();
 });
 
+// app.use(cartMiddleware);
+
 app.use(expressValidator({
     errorFormatter: function(param, message, value) {
         let namespace   = param.split('.');
@@ -93,7 +95,7 @@ app.use('/',            indexRouter);
 // app.use('/api/cart',    cartRouter);
 app.use('/api/users',   usersRouter);
 // app.use('/api/admin',   adminRouter);
-app.use('/api/player', playerRouter);
+// app.use('/api/player', playerRouter);
 
 
 // catch 404 and forward to error handler
