@@ -12,11 +12,13 @@ let indexRouter     = require('./routes/index');
 // let cartRouter      = require('./routes/cart/cart');
 let usersRouter     = require('./routes/users/users');
 // let adminRouter     = require('./routes/admin/admin');
-let playerRouter    = require('./routes/player/player');
+// let playerRouter    = require('./routes/player/player');
 
 let flash           = require('connect-flash');
 let session         = require('express-session');
 let expressValidator= require('express-validator');
+
+// let cartMiddleware  = require('./routes/cart/utils/cartMiddleware');
 
 let MongoStore = require('connect-mongo')(session);
 
