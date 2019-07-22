@@ -72,18 +72,18 @@ app.use(function(req, res, next) {
     next();
 });
 
-// app.use(function (req, res, next){
-//     Category.find({})
-//         .then( categories => {
+app.use(function (req, res, next){
+    Category.find({})
+        .then( categories => {
 
-//             res.locals.categories = categories
+            res.locals.categories = categories
             
-//             next()
-//         })
-//         .catch( error => {
-//             return next(error)
-//         })
-// })
+            next()
+        })
+        .catch( error => {
+            return next(error)
+        })
+})
 
 app.use(cartMiddleware);
 
@@ -109,7 +109,7 @@ app.use('/',            indexRouter);
 app.use('/api/cart',    cartRouter);
 app.use('/api/users',   usersRouter);
 // app.use('/api/admin',   adminRouter);
-// app.use('/api/product', productRouter);
+app.use('/api/product', productRouter);
 // app.use('/api/player', playerRouter);
 
 
