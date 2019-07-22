@@ -72,18 +72,18 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(function (req, res, next){
-    Category.find({})
-        .then( categories => {
+// app.use(function (req, res, next){
+//     Category.find({})
+//         .then( categories => {
 
-            res.locals.categories = categories
+//             res.locals.categories = categories
             
-            next()
-        })
-        .catch( error => {
-            return next(error)
-        })
-})
+//             next()
+//         })
+//         .catch( error => {
+//             return next(error)
+//         })
+// })
 
 app.use(cartMiddleware);
 
