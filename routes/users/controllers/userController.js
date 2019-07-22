@@ -42,7 +42,7 @@ module.exports = {
                                                         message: error
                                                     })
                                                 } else {
-                                                    res.redirect('/api/users/signup')
+                                                    next()
                                                 }
                                             })
                                         })

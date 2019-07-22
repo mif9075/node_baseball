@@ -1,7 +1,7 @@
 let crypto = require('crypto');
 
 function getGravatar(email) {
-    let defaultSize = 200;
+    let defaultSize = 100;
 
     if(!email) return `https://gravatar.com/avatar/?s=${ defaultSize }&d=retro`
 

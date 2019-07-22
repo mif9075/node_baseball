@@ -3,6 +3,7 @@ let router      = express.Router();
 let passport    = require('passport');
 
 let userController      = require('../users/controllers/userController');
+let cartController      = require('../cart/controllers/cartController')
 let signupValidation    = require('./utils/signupValidation');
 
 /* GET users listing. */
@@ -19,7 +20,7 @@ router.get('/signup', function(req, res, next) {
     res.render('auth/signup', { errors: req.flash('errors'), error_msg: null})
 });
 
-router.post('/signup', signupValidation, userController.signup);
+router.post('/signup', signupValidation, userController.signup, cartController.createUserCart);
 
 /* Signin */
 router.get('/signin', function (req, res) {

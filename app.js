@@ -9,7 +9,7 @@ let cookieParser    = require('cookie-parser');
 let methodOverride  = require('method-override');
 
 let indexRouter     = require('./routes/index');
-// let cartRouter      = require('./routes/cart/cart');
+let cartRouter      = require('./routes/cart/cart');
 let usersRouter     = require('./routes/users/users');
 // let adminRouter     = require('./routes/admin/admin');
 // let playerRouter    = require('./routes/player/player');
@@ -18,7 +18,7 @@ let flash           = require('connect-flash');
 let session         = require('express-session');
 let expressValidator= require('express-validator');
 
-// let cartMiddleware  = require('./routes/cart/utils/cartMiddleware');
+let cartMiddleware  = require('./routes/cart/utils/cartMiddleware');
 
 let MongoStore = require('connect-mongo')(session);
 
@@ -71,7 +71,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-// app.use(cartMiddleware);
+app.use(cartMiddleware);
 
 app.use(expressValidator({
     errorFormatter: function(param, message, value) {
@@ -92,7 +92,7 @@ app.use(expressValidator({
 }));
 
 app.use('/',            indexRouter);
-// app.use('/api/cart',    cartRouter);
+app.use('/api/cart',    cartRouter);
 app.use('/api/users',   usersRouter);
 // app.use('/api/admin',   adminRouter);
 // app.use('/api/player', playerRouter);
