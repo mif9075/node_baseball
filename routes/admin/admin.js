@@ -11,6 +11,8 @@ router.get('/', function (req, res) {
     res.send('Admin Worked')
 })
 
+//Add-Category
+
 router.get('/add-category', function (req, res) {
     res.render('product/addcategory', { errors:  req.flash('addCategoryError'), 
                                         success: req.flash('addCategorySuccess') })

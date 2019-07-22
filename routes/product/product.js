@@ -1,7 +1,8 @@
 let express = require('express')
 let router  = express.Router()
 
-let productController = require('./controllers/productController')
+let productController = require('./controllers/productController');
+let paginate = require('./utils/pagination');
 
 let Product = require('./models/Product')
 
@@ -30,9 +31,9 @@ stream.on('error', function () {
     console.log("30: Error: " + error)
 })
 
-router.get('/', function (req, res) {
-    res.send('product page')
-})
+router.get('/', productController.getPageIfUserLoggedIn);
+
+router.get('/page/:page', paginate);
 
 router.post('/search', (req, res) => {
     res.redirect('/api/product/search?q=' + req.body.q)

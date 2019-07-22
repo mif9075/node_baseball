@@ -9,7 +9,7 @@ module.exports = {
             newProduct.category = req.params.categoryID
             newProduct.name     = faker.commerce.productName()
             newProduct.price    = faker.commerce.price()
-            newProduct.image    = faker.image.sports()
+            newProduct.image    = faker.image.image()
     
             newProduct.save()
         }
