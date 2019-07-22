@@ -108,7 +108,7 @@ app.use(expressValidator({
 app.use('/',            indexRouter);
 app.use('/api/cart',    cartRouter);
 app.use('/api/users',   usersRouter);
-// app.use('/api/admin',   adminRouter);
+app.use('/api/admin',   adminRouter);
 app.use('/api/product', productRouter);
 // app.use('/api/player', playerRouter);
 
