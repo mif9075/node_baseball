@@ -51,8 +51,9 @@ module.exports = {
         })
     },
     getPageIfUserLoggedIn: (req, res, next) => {
+        // res.render('product/index-product')
         if (req.user) paginate(req, res, next)
-        else res.render('index')
+        else res.render('product/index-product')
     },
     searchProductByQuery: (req, res) => {
         if (req.query.q) {
