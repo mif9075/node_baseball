@@ -21,7 +21,8 @@ let expressValidator= require('express-validator');
 
 let cartMiddleware  = require('./routes/cart/utils/cartMiddleware');
 
-let MongoStore = require('connect-mongo')(session);
+let MongoStore  = require('connect-mongo')(session);
+let Category    = require('./routes/product/models/Category')
 
 require('dotenv').config();
 
