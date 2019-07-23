@@ -20,9 +20,6 @@ router.get('/tickets', function (req, res) {
     res.render('index/tickets.ejs')
 });
 
-router.get('/scores', function (req, res) {
-    res.render('index/scores.ejs')
-});
 
 router.get('/teams', function (req, res) {
     res.render('index/teams.ejs')
