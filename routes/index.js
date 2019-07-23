@@ -8,6 +8,10 @@ router.get('/', function (req, res) {
     res.render('index') 
 });
 
+router.get('/scores', function (req, res) {
+    res.render('scores/scores.ejs')
+});
+
 module.exports = router;
 
 
