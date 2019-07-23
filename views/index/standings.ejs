@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partials/head %>
+<body>
+<% include ../partials/nav %>
+<br>
+<br>
+<br>
+
+<div id="layout" class="pure-g content">
+
+<div class="pure-u-1 pure-u-md-1-2 xmlstats-title">
+ <h1>MLB Standings</h1>
+</div>
+
+<div class="pure-u-1">
+
+
+<div class="pure-u-1">
+ <h2>American League</h2>
+</div>
+
+  <table class="standings standings-mlb mobile pure-table pure-table-striped">
+    <thead>
+    <tr>
+     <th>East</th>
+     <th>W</th>
+     <th>L</th>
+     <th>Pct</th>
+     <th>GB</th>
+     <th>RS</th>
+     <th>RA</th>
+     <th>+/-</th>
+     <th>Strk</th>
+     <th>L5</th>
+     <th>L10</th>
+     <th>Home</th>
+     <th>Away</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/new-york-yankees">N.Y. Yankees</a></td>
+     <td data-label="Wins">64</td>
+     <td data-label="Losses">35</td>
+     <td data-label="Win %">.646</td>
+     <td data-label="Games Back">—&nbsp;</td>
+     <td data-label="Runs Scored">5.7</td>
+     <td data-label="Runs Allowed">4.3</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>1.4</td>
+     <td data-label="Streak">L2</td>
+     <td data-label="Last 5">3-2</td>
+     <td data-label="Last 10">6-4</td>
+     <td data-label="Home">38-17</td>
+     <td data-label="Away">26-18</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/tampa-bay-rays">Tampa Bay</a></td>
+     <td data-label="Wins">57</td>
+     <td data-label="Losses">46</td>
+     <td data-label="Win %">.553</td>
+     <td data-label="Games Back">9.0</td>
+     <td data-label="Runs Scored">4.6</td>
+     <td data-label="Runs Allowed">3.8</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.8</td>
+     <td data-label="Streak">L1</td>
+     <td data-label="Last 5">1-4</td>
+     <td data-label="Last 10">4-6</td>
+     <td data-label="Home">27-25</td>
+     <td data-label="Away">30-21</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/boston-red-sox">Boston</a></td>
+     <td data-label="Wins">55</td>
+     <td data-label="Losses">46</td>
+     <td data-label="Win %">.545</td>
+     <td data-label="Games Back">10.0</td>
+     <td data-label="Runs Scored">5.7</td>
+     <td data-label="Runs Allowed">5.1</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.6</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">3-2</td>
+     <td data-label="Last 10">5-5</td>
+     <td data-label="Home">24-25</td>
+     <td data-label="Away">31-21</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/toronto-blue-jays">Toronto</a></td>
+     <td data-label="Wins">38</td>
+     <td data-label="Losses">64</td>
+     <td data-label="Win %">.373</td>
+     <td data-label="Games Back">27.5</td>
+     <td data-label="Runs Scored">4.4</td>
+     <td data-label="Runs Allowed">5.2</td>
+     <td data-label="+/-" style="color:red">-0.8</td>
+     <td data-label="Streak">L2</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">4-6</td>
+     <td data-label="Home">18-31</td>
+     <td data-label="Away">20-33</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/baltimore-orioles">Baltimore</a></td>
+     <td data-label="Wins">31</td>
+     <td data-label="Losses">68</td>
+     <td data-label="Win %">.313</td>
+     <td data-label="Games Back">33.0</td>
+     <td data-label="Runs Scored">4.3</td>
+     <td data-label="Runs Allowed">6.1</td>
+     <td data-label="+/-" style="color:red">-1.9</td>
+     <td data-label="Streak">L1</td>
+     <td data-label="Last 5">3-2</td>
+     <td data-label="Last 10">4-6</td>
+     <td data-label="Home">15-36</td>
+     <td data-label="Away">16-32</td>
+    </tr>
+    </tbody>
+    <thead>
+    <tr>
+     <th>Central</th>
+     <th>W</th>
+     <th>L</th>
+     <th>Pct</th>
+     <th>GB</th>
+     <th>RS</th>
+     <th>RA</th>
+     <th>+/-</th>
+     <th>Strk</th>
+     <th>L5</th>
+     <th>L10</th>
+     <th>Home</th>
+     <th>Away</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/minnesota-twins">Minnesota</a></td>
+     <td data-label="Wins">61</td>
+     <td data-label="Losses">38</td>
+     <td data-label="Win %">.616</td>
+     <td data-label="Games Back">—&nbsp;</td>
+     <td data-label="Runs Scored">5.6</td>
+     <td data-label="Runs Allowed">4.5</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>1.1</td>
+     <td data-label="Streak">W2</td>
+     <td data-label="Last 5">3-2</td>
+     <td data-label="Last 10">5-5</td>
+     <td data-label="Home">31-19</td>
+     <td data-label="Away">30-19</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/cleveland-indians">Cleveland</a></td>
+     <td data-label="Wins">58</td>
+     <td data-label="Losses">41</td>
+     <td data-label="Win %">.586</td>
+     <td data-label="Games Back">3.0</td>
+     <td data-label="Runs Scored">4.6</td>
+     <td data-label="Runs Allowed">4.1</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.5</td>
+     <td data-label="Streak">W2</td>
+     <td data-label="Last 5">4-1</td>
+     <td data-label="Last 10">8-2</td>
+     <td data-label="Home">32-21</td>
+     <td data-label="Away">26-20</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/chicago-white-sox">Chi. White Sox</a></td>
+     <td data-label="Wins">45</td>
+     <td data-label="Losses">52</td>
+     <td data-label="Win %">.464</td>
+     <td data-label="Games Back">15.0</td>
+     <td data-label="Runs Scored">4.3</td>
+     <td data-label="Runs Allowed">5.2</td>
+     <td data-label="+/-" style="color:red">-0.9</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">3-2</td>
+     <td data-label="Last 10">3-7</td>
+     <td data-label="Home">26-20</td>
+     <td data-label="Away">19-32</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/kansas-city-royals">Kansas City</a></td>
+     <td data-label="Wins">37</td>
+     <td data-label="Losses">64</td>
+     <td data-label="Win %">.366</td>
+     <td data-label="Games Back">25.0</td>
+     <td data-label="Runs Scored">4.4</td>
+     <td data-label="Runs Allowed">5.1</td>
+     <td data-label="+/-" style="color:red">-0.8</td>
+     <td data-label="Streak">L1</td>
+     <td data-label="Last 5">3-2</td>
+     <td data-label="Last 10">7-3</td>
+     <td data-label="Home">22-29</td>
+     <td data-label="Away">15-35</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/detroit-tigers">Detroit</a></td>
+     <td data-label="Wins">30</td>
+     <td data-label="Losses">65</td>
+     <td data-label="Win %">.316</td>
+     <td data-label="Games Back">29.0</td>
+     <td data-label="Runs Scored">3.7</td>
+     <td data-label="Runs Allowed">5.6</td>
+     <td data-label="+/-" style="color:red">-2.0</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">1-4</td>
+     <td data-label="Last 10">2-8</td>
+     <td data-label="Home">13-34</td>
+     <td data-label="Away">17-31</td>
+    </tr>
+    </tbody>
+    <thead>
+    <tr>
+     <th>West</th>
+     <th>W</th>
+     <th>L</th>
+     <th>Pct</th>
+     <th>GB</th>
+     <th>RS</th>
+     <th>RA</th>
+     <th>+/-</th>
+     <th>Strk</th>
+     <th>L5</th>
+     <th>L10</th>
+     <th>Home</th>
+     <th>Away</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/houston-astros">Houston</a></td>
+     <td data-label="Wins">65</td>
+     <td data-label="Losses">37</td>
+     <td data-label="Win %">.637</td>
+     <td data-label="Games Back">—&nbsp;</td>
+     <td data-label="Runs Scored">5.3</td>
+     <td data-label="Runs Allowed">4.1</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>1.1</td>
+     <td data-label="Streak">W6</td>
+     <td data-label="Last 5">5-0</td>
+     <td data-label="Last 10">8-2</td>
+     <td data-label="Home">37-14</td>
+     <td data-label="Away">28-23</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/oakland-athletics">Oakland</a></td>
+     <td data-label="Wins">57</td>
+     <td data-label="Losses">44</td>
+     <td data-label="Win %">.564</td>
+     <td data-label="Games Back">7.5</td>
+     <td data-label="Runs Scored">5.2</td>
+     <td data-label="Runs Allowed">4.3</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.8</td>
+     <td data-label="Streak">L2</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">7-3</td>
+     <td data-label="Home">31-20</td>
+     <td data-label="Away">26-24</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/los-angeles-angels">L.A. Angels</a></td>
+     <td data-label="Wins">52</td>
+     <td data-label="Losses">49</td>
+     <td data-label="Win %">.515</td>
+     <td data-label="Games Back">12.5</td>
+     <td data-label="Runs Scored">5.1</td>
+     <td data-label="Runs Allowed">5.0</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.1</td>
+     <td data-label="Streak">W2</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">7-3</td>
+     <td data-label="Home">27-23</td>
+     <td data-label="Away">25-26</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/texas-rangers">Texas</a></td>
+     <td data-label="Wins">50</td>
+     <td data-label="Losses">50</td>
+     <td data-label="Win %">.500</td>
+     <td data-label="Games Back">14.0</td>
+     <td data-label="Runs Scored">5.2</td>
+     <td data-label="Runs Allowed">5.4</td>
+     <td data-label="+/-" style="color:red">-0.1</td>
+     <td data-label="Streak">L8</td>
+     <td data-label="Last 5">0-5</td>
+     <td data-label="Last 10">2-8</td>
+     <td data-label="Home">31-21</td>
+     <td data-label="Away">19-29</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/seattle-mariners">Seattle</a></td>
+     <td data-label="Wins">41</td>
+     <td data-label="Losses">62</td>
+     <td data-label="Win %">.398</td>
+     <td data-label="Games Back">24.5</td>
+     <td data-label="Runs Scored">5.0</td>
+     <td data-label="Runs Allowed">6.0</td>
+     <td data-label="+/-" style="color:red">-1.0</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">2-8</td>
+     <td data-label="Home">21-31</td>
+     <td data-label="Away">20-31</td>
+    </tr>
+    </tbody>
+  </table>
+
+<div style="margin-top:2em"></div>
+
+<div class="pure-u-1">
+ <h2>National League</h2>
+</div>
+
+  <table class="standings standings-mlb mobile pure-table pure-table-striped">
+    <thead>
+    <tr>
+     <th>East</th>
+     <th>W</th>
+     <th>L</th>
+     <th>Pct</th>
+     <th>GB</th>
+     <th>RS</th>
+     <th>RA</th>
+     <th>+/-</th>
+     <th>Strk</th>
+     <th>L5</th>
+     <th>L10</th>
+     <th>Home</th>
+     <th>Away</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/atlanta-braves">Atlanta</a></td>
+     <td data-label="Wins">60</td>
+     <td data-label="Losses">41</td>
+     <td data-label="Win %">.594</td>
+     <td data-label="Games Back">—&nbsp;</td>
+     <td data-label="Runs Scored">5.3</td>
+     <td data-label="Runs Allowed">4.8</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.5</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">6-4</td>
+     <td data-label="Home">30-21</td>
+     <td data-label="Away">30-20</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/washington-nationals">Washington</a></td>
+     <td data-label="Wins">52</td>
+     <td data-label="Losses">46</td>
+     <td data-label="Win %">.531</td>
+     <td data-label="Games Back">6.5</td>
+     <td data-label="Runs Scored">4.9</td>
+     <td data-label="Runs Allowed">4.6</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.4</td>
+     <td data-label="Streak">L1</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">6-4</td>
+     <td data-label="Home">26-20</td>
+     <td data-label="Away">26-26</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/philadelphia-phillies">Philadelphia</a></td>
+     <td data-label="Wins">52</td>
+     <td data-label="Losses">48</td>
+     <td data-label="Win %">.520</td>
+     <td data-label="Games Back">7.5</td>
+     <td data-label="Runs Scored">4.8</td>
+     <td data-label="Runs Allowed">5.0</td>
+     <td data-label="+/-" style="color:red">-0.2</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">3-2</td>
+     <td data-label="Last 10">5-5</td>
+     <td data-label="Home">30-21</td>
+     <td data-label="Away">22-27</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/new-york-mets">N.Y. Mets</a></td>
+     <td data-label="Wins">45</td>
+     <td data-label="Losses">54</td>
+     <td data-label="Win %">.455</td>
+     <td data-label="Games Back">14.0</td>
+     <td data-label="Runs Scored">4.7</td>
+     <td data-label="Runs Allowed">5.0</td>
+     <td data-label="+/-" style="color:red">-0.3</td>
+     <td data-label="Streak">L1</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">5-5</td>
+     <td data-label="Home">23-19</td>
+     <td data-label="Away">22-35</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/miami-marlins">Miami</a></td>
+     <td data-label="Wins">36</td>
+     <td data-label="Losses">62</td>
+     <td data-label="Win %">.367</td>
+     <td data-label="Games Back">22.5</td>
+     <td data-label="Runs Scored">3.6</td>
+     <td data-label="Runs Allowed">4.7</td>
+     <td data-label="+/-" style="color:red">-1.1</td>
+     <td data-label="Streak">L4</td>
+     <td data-label="Last 5">1-4</td>
+     <td data-label="Last 10">3-7</td>
+     <td data-label="Home">18-32</td>
+     <td data-label="Away">18-30</td>
+    </tr>
+    </tbody>
+    <thead>
+    <tr>
+     <th>Central</th>
+     <th>W</th>
+     <th>L</th>
+     <th>Pct</th>
+     <th>GB</th>
+     <th>RS</th>
+     <th>RA</th>
+     <th>+/-</th>
+     <th>Strk</th>
+     <th>L5</th>
+     <th>L10</th>
+     <th>Home</th>
+     <th>Away</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/chicago-cubs">Chi. Cubs</a></td>
+     <td data-label="Wins">54</td>
+     <td data-label="Losses">46</td>
+     <td data-label="Win %">.540</td>
+     <td data-label="Games Back">—&nbsp;</td>
+     <td data-label="Runs Scored">5.1</td>
+     <td data-label="Runs Allowed">4.4</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.6</td>
+     <td data-label="Streak">L2</td>
+     <td data-label="Last 5">3-2</td>
+     <td data-label="Last 10">7-3</td>
+     <td data-label="Home">36-18</td>
+     <td data-label="Away">18-28</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/st-louis-cardinals">St. Louis</a></td>
+     <td data-label="Wins">52</td>
+     <td data-label="Losses">47</td>
+     <td data-label="Win %">.525</td>
+     <td data-label="Games Back">1.5</td>
+     <td data-label="Runs Scored">4.5</td>
+     <td data-label="Runs Allowed">4.4</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.2</td>
+     <td data-label="Streak">W2</td>
+     <td data-label="Last 5">4-1</td>
+     <td data-label="Last 10">8-2</td>
+     <td data-label="Home">28-20</td>
+     <td data-label="Away">24-27</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/milwaukee-brewers">Milwaukee</a></td>
+     <td data-label="Wins">53</td>
+     <td data-label="Losses">49</td>
+     <td data-label="Win %">.520</td>
+     <td data-label="Games Back">2.0</td>
+     <td data-label="Runs Scored">4.9</td>
+     <td data-label="Runs Allowed">4.9</td>
+     <td data-label="+/-" style="color:red">-0.0</td>
+     <td data-label="Streak">L1</td>
+     <td data-label="Last 5">3-2</td>
+     <td data-label="Last 10">6-4</td>
+     <td data-label="Home">30-22</td>
+     <td data-label="Away">23-27</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/pittsburgh-pirates">Pittsburgh</a></td>
+     <td data-label="Wins">46</td>
+     <td data-label="Losses">53</td>
+     <td data-label="Win %">.465</td>
+     <td data-label="Games Back">7.5</td>
+     <td data-label="Runs Scored">4.7</td>
+     <td data-label="Runs Allowed">5.2</td>
+     <td data-label="+/-" style="color:red">-0.6</td>
+     <td data-label="Streak">L2</td>
+     <td data-label="Last 5">1-4</td>
+     <td data-label="Last 10">2-8</td>
+     <td data-label="Home">23-24</td>
+     <td data-label="Away">23-29</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/cincinnati-reds">Cincinnati</a></td>
+     <td data-label="Wins">45</td>
+     <td data-label="Losses">53</td>
+     <td data-label="Win %">.459</td>
+     <td data-label="Games Back">8.0</td>
+     <td data-label="Runs Scored">4.4</td>
+     <td data-label="Runs Allowed">4.1</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.3</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">4-6</td>
+     <td data-label="Home">25-24</td>
+     <td data-label="Away">20-29</td>
+    </tr>
+    </tbody>
+    <thead>
+    <tr>
+     <th>West</th>
+     <th>W</th>
+     <th>L</th>
+     <th>Pct</th>
+     <th>GB</th>
+     <th>RS</th>
+     <th>RA</th>
+     <th>+/-</th>
+     <th>Strk</th>
+     <th>L5</th>
+     <th>L10</th>
+     <th>Home</th>
+     <th>Away</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/los-angeles-dodgers">L.A. Dodgers</a></td>
+     <td data-label="Wins">67</td>
+     <td data-label="Losses">35</td>
+     <td data-label="Win %">.657</td>
+     <td data-label="Games Back">—&nbsp;</td>
+     <td data-label="Runs Scored">5.5</td>
+     <td data-label="Runs Allowed">3.8</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>1.6</td>
+     <td data-label="Streak">W3</td>
+     <td data-label="Last 5">4-1</td>
+     <td data-label="Last 10">7-3</td>
+     <td data-label="Home">40-12</td>
+     <td data-label="Away">27-23</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/san-francisco-giants">San Francisco</a></td>
+     <td data-label="Wins">52</td>
+     <td data-label="Losses">50</td>
+     <td data-label="Win %">.510</td>
+     <td data-label="Games Back">15.0</td>
+     <td data-label="Runs Scored">4.6</td>
+     <td data-label="Runs Allowed">4.8</td>
+     <td data-label="+/-" style="color:red">-0.2</td>
+     <td data-label="Streak">W2</td>
+     <td data-label="Last 5">4-1</td>
+     <td data-label="Last 10">9-1</td>
+     <td data-label="Home">24-27</td>
+     <td data-label="Away">28-23</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/arizona-diamondbacks">Arizona</a></td>
+     <td data-label="Wins">51</td>
+     <td data-label="Losses">50</td>
+     <td data-label="Win %">.505</td>
+     <td data-label="Games Back">15.5</td>
+     <td data-label="Runs Scored">5.2</td>
+     <td data-label="Runs Allowed">4.5</td>
+     <td data-label="+/-" style="color:green"><span class="hide">-</span>0.7</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">5-5</td>
+     <td data-label="Home">22-25</td>
+     <td data-label="Away">29-25</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/san-diego-padres">San Diego</a></td>
+     <td data-label="Wins">47</td>
+     <td data-label="Losses">52</td>
+     <td data-label="Win %">.475</td>
+     <td data-label="Games Back">18.5</td>
+     <td data-label="Runs Scored">4.4</td>
+     <td data-label="Runs Allowed">4.9</td>
+     <td data-label="+/-" style="color:red">-0.5</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">2-3</td>
+     <td data-label="Last 10">3-7</td>
+     <td data-label="Home">23-27</td>
+     <td data-label="Away">24-25</td>
+    </tr>
+    <tr>
+     <td data-label="Team"><a href="/mlb/team/colorado-rockies">Colorado</a></td>
+     <td data-label="Wins">47</td>
+     <td data-label="Losses">53</td>
+     <td data-label="Win %">.470</td>
+     <td data-label="Games Back">19.0</td>
+     <td data-label="Runs Scored">5.4</td>
+     <td data-label="Runs Allowed">6.0</td>
+     <td data-label="+/-" style="color:red">-0.5</td>
+     <td data-label="Streak">W1</td>
+     <td data-label="Last 5">1-4</td>
+     <td data-label="Last 10">2-8</td>
+     <td data-label="Home">26-25</td>
+     <td data-label="Away">21-28</td>
+    </tr>
+    </tbody>
+  </table>
+
+ <div class="pure-u-1">
+  <p><small><i>Standings updated through Tuesday, July 23, 2019 at 1:00 AM EDT</i></small></p>
+ </div>
+
+</div>
+
+</div>
+
+
+<% include ../partials/footer %>  
+
+
+</body>
+</html>

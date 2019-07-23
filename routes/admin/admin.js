@@ -8,7 +8,7 @@ let categoryValidation = require('./utils/categoryValidation')
 let Product = require('../product/models/Product')
 
 router.get('/', function (req, res) {
-    res.send('Admin Worked')
+    res.render('admin/admin.ejs')
 })
 
 //Add-Category
