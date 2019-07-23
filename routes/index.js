@@ -29,8 +29,6 @@ router.get('/teams', function (req, res) {
 });
 
 
-
-
 module.exports = router;
 
 
