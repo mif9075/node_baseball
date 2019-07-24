@@ -4,11 +4,14 @@
   <body>
     
     <% include ../partials/nav %>
+    <br>
+    <br>
+    <br>
 
     <div class="row">
 
         <% for(let i = 0; i < products.length; i++) { %>
-            <% console.log(products[i]) %>
+           
           <div class="col">      
               <div class="card" style="width: 18rem;">
                   <a href="/api/product/<%= products[i]._id %>"> 
@@ -22,6 +25,7 @@
                   </div>
               </div>
           </div>
+
         <% } %>
     </div>
   </body>

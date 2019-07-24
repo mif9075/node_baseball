@@ -9,6 +9,7 @@ let UserSchema  = new mongoose.Schema({
         picture:{ type: String, default: '' }
     },
     address:    { type: String, default: '' },
+    team:       { type: String, default: '' },
     history: [
         {
             paid: { type: Number, default: 0 },
