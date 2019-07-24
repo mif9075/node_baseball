@@ -33,7 +33,7 @@ router.get('/signin', function (req, res) {
 
 router.post('/signin', passport.authenticate('local-login', {
     successRedirect: '/',
-    failureRedirect: '/api/users/signup',
+    failureRedirect: '/api/users/signin',
     failureFlash: true
 }))
 
