@@ -1,3 +1,7 @@
+let date = new Date();
+
+let num = date.getFullYear();
+
 window.onload = init;
 
 function init() {
@@ -11,22 +15,26 @@ function init() {
         .addEventListener('click', buttonRequest);
     document.querySelector('#option2015')
         .addEventListener('click', buttonRequest);
-}
+    sendRequest(num);
+
 
 function buttonRequest(event){
-    let num = event.target.innerText;
+    num = event.target.innerText;
     sendRequest(num);
 }
+
+
 function sendRequest(num) {
 
     const xhr = new XMLHttpRequest();
-    let url = `http://lookup-service-prod.mlb.com/json/named.psc_leader_hit_hr_dist.bam?season=${num}&game_type=%27D%27&game_type=%27L%27&game_type%27W%27&game_type=%27F%27&min_hip_count=15`;
+    let url = `http://lookup-service-prod.mlb.com/json/named.psc_leader_hit_hr_dist.bam?season=${num}`;
 
     xhr.open('GET', url);
     xhr.onload = handleData;
     xhr.send();
 
-    console.log(url)
+    // console.log(url)
+}
 }
 
 function handleData(event) {
