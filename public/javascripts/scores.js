@@ -123,15 +123,15 @@ function init(){
               </div>`
                 } else if (items[item].status.status === 'Final') {
 
-                    cards += `<div class="col-md-4">
+                cards += `<div class="col-md-4">
                 <div class="card-header">
-                <p class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].time_zone}   SCORE
+                <p class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].time_zone}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCORE
                 </p>
                 </div>
                 <div class="card-body">
                     
-                    <h6>${items[item].away_team_name} ${items[item].linescore.r.away}</br>${items[item].away_win}-${items[item].away_loss}</h6>
-                    <h6>${items[item].home_team_name} ${items[item].linescore.r.home}</br>${items[item].home_win}-${items[item].home_loss}</h6>
+                    <h6>${items[item].away_team_name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${items[item].linescore.r.away}</br>${items[item].away_win}-${items[item].away_loss}</h6>
+                    <h6>${items[item].home_team_name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${items[item].linescore.r.home}</br>${items[item].home_win}-${items[item].home_loss}</h6>
                     <hr>
                     <h6>W: ${items[item].winning_pitcher.last}, ${items[item].losing_pitcher.first}
                     
@@ -152,12 +152,12 @@ function init(){
                 } else {
                     cards += `<div class="col-md-4">
                 <div class="card-header">
-                <p class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].time_zone}    SCORE</p>
+                <p class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].time_zone}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCORE</p>
                 </div>
                 <div class="card-body">
                     
-                    <h6>${items[item].away_team_name} ${items[item].linescore.r.away}</br>${items[item].away_win}-${items[item].away_loss}</h6>
-                    <h6>${items[item].home_team_name} ${items[item].linescore.r.home}</br>${items[item].home_win}-${items[item].home_loss}</h6>
+                    <h6>${items[item].away_team_name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${items[item].linescore.r.away}</br>${items[item].away_win}-${items[item].away_loss}</h6>
+                    <h6>${items[item].home_team_name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${items[item].linescore.r.home}</br>${items[item].home_win}-${items[item].home_loss}</h6>
                     <hr>
                     
                     <p>At 
