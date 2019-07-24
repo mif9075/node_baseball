@@ -42,20 +42,23 @@ function init(){
     document.getElementById("#primary").innerHTML = date.toDateString();
     
     function newDateNext() {
-        newDay=newDay+1;
-        newString = "0"+newDay;
 
-        document.getElementById("#primary").innerHTML = newDay;
+        date.setDate(date.getDate() + 1);
+
+        day = ('0' + date.getDate()).slice(-2);
+
+        document.getElementById("#primary").innerHTML = date.toDateString();
     
         makeRequest();
 
     }
 
     function newDatePrevious() {
-        newDay=newDay-1;
-        newString = "0"+newDay;
+        date.setDate(date.getDate() - 1);
+
+        day = ('0' + date.getDate()).slice(-2);
         
-        document.getElementById("#primary").innerHTML = newDay;
+        document.getElementById("#primary").innerHTML = date.toDateString();
 
         makeRequest();
 
