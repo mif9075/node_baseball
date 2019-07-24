@@ -1,22 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
     <% include ../partials/head %>
-    <script src="/javascripts/standings.js"></script>
-  <body>
-    <% include ../partials/nav %>
-    <br>
-    <br>
-    <br>
-<H1>Standing</H1>
-<main role="main">       
-    <div class="album py-5 bg-light">
-    <div class="container-standing">
-    <div class="row content-standing">
-    </div>
-    </div>
-    </div>       
-</main>
+    <script src="/javascripts/statcast.js"></script> 
+    </head>
+
+    <body>
+        <% include ../partials/nav %>
+
+        <br>
+        <h3>Statcast Leaderboard - HR Distance</h3>
+        <p>REGULAR SEASON - SELECT YEAR:</p>
+
+        <div class="btn-group btn-group-toggle">
+            <label class="btn btn-light">
+                <button class="2019" name="options" id="option2019">2019</button>
+            </label>
+            <label class="btn btn-light">
+                <button class="2018" name="options" id="option2018" >2018</button>
+            </label>
+            <label class="btn btn-light">
+                <button class="2017" name="options" id="option2017" >2017</button>
+            </label>
+            <label class="btn btn-light">
+                <button class="2016" name="options" id="option2016" >2016</button>
+            </label>
+            <label class="btn btn-light">
+                <button class="2015" name="options" id="option2015" >2015</button>
+            </label>
+        </div>
+        
+        <br>
+
+        <div class="table-responsive-sm">
+        <table class="table table-sm ">
+            <thead>
+              <tr>
+                <th scope="col">Batter</th>
+                <th scope="col">Distance</th>
+                <th scope="col">Exit Velocity</th>
+                <th scope="col">Launch Angle</th>
+                <th scope="col">Height</th>
+                <th scope="col">Pitcher</th>
+                <th scope="col">Pitch Speed</th>
+                <th scope="col">Date</th>
+            </tr>
+                
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">(feet)</th>
+                <th scope="col">(mph)</th>
+                <th scope="col">(dec)</th>
+                <th scope="col">(feet)</th>
+                <th scope="col"></th>
+                <th scope="col">(mph)</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row" class="batter" ></th>
+                <td class="distance"></td>
+                <td class="launch_speed"></td>
+                <td class="launch_angle"></td>
+                <td class="height"></td>
+                <td class="pitcher"></td>
+                <td class="pitch_speed"></td>
+                <td class="game_date"></td>
+              </tr>
+            </tbody>
+
+          </table>
+          <p class="no_data"></p>
+        </div>
+
     <% include ../partials/footer %>
-  </body>
+    </body>
 </html>
 
