@@ -9,20 +9,20 @@ router.get('/', function (req, res) {
 });
 
 router.get('/scores', function (req, res) {
-    res.render('index/scores.ejs')
+    res.render('index/scores')
 });
 
 router.get('/standings', function (req, res) {
-    res.render('index/standings.ejs')
+    res.render('index/standings')
 });
 
 router.get('/tickets', function (req, res) {
-    res.render('index/tickets.ejs')
+    res.render('index/tickets')
 });
 
 
 router.get('/teams', function (req, res) {
-    res.render('index/teams.ejs')
+    res.render('index/teams')
 });
 
 
