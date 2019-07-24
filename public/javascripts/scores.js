@@ -95,7 +95,7 @@ function init(){
 
         for (let item in items) {
             if (items.hasOwnProperty(item)) {
-                if ((items[item].status.status === 'Preview') || (items[item].status.status === 'Warmup') || (items[item].status.status === 'Pre-Game')) {
+                if ((items[item].status.status === 'Preview') || (items[item].status.status === 'Pre-Game')) {
                 // console.log(items[item].status.status);
                 cards += `<div class="col-md-4">
                 <div class="card-header">
@@ -125,12 +125,13 @@ function init(){
 
                     cards += `<div class="col-md-4">
                 <div class="card-header">
-                <p class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].time_zone}</p>
+                <p class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].time_zone}   SCORE
+                </p>
                 </div>
                 <div class="card-body">
                     
-                    <h6>${items[item].away_team_name}</br>${items[item].away_win}-${items[item].away_loss}</h6>
-                    <h6>${items[item].home_team_name}</br>${items[item].home_win}-${items[item].home_loss}</h6>
+                    <h6>${items[item].away_team_name} ${items[item].linescore.r.away}</br>${items[item].away_win}-${items[item].away_loss}</h6>
+                    <h6>${items[item].home_team_name} ${items[item].linescore.r.home}</br>${items[item].home_win}-${items[item].home_loss}</h6>
                     <hr>
                     <h6>W: ${items[item].winning_pitcher.last}, ${items[item].losing_pitcher.first}
                     
@@ -148,6 +149,24 @@ function init(){
                 </div>
               </div>`
 
+                } else {
+                    cards += `<div class="col-md-4">
+                <div class="card-header">
+                <p class="my-0 font-weight-normal">${items[item].time} ${items[item].ampm} ${items[item].time_zone}    SCORE</p>
+                </div>
+                <div class="card-body">
+                    
+                    <h6>${items[item].away_team_name} ${items[item].linescore.r.away}</br>${items[item].away_win}-${items[item].away_loss}</h6>
+                    <h6>${items[item].home_team_name} ${items[item].linescore.r.home}</br>${items[item].home_win}-${items[item].home_loss}</h6>
+                    <hr>
+                    
+                    <p>At 
+                    ${items[item].venue}
+                    </p>
+                    
+                  </div>
+                </div>
+              </div>`
                 }
             }
         }
