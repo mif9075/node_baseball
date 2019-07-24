@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/scores', function (req, res) {
-    res.render('index/scores')
+    res.render('index')
 });
 
 router.get('/standings', function (req, res) {
