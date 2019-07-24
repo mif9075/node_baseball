@@ -12,8 +12,8 @@ router.get('/scores', function (req, res) {
     res.render('index')
 });
 
-router.get('/standings', function (req, res) {
-    res.render('index/standings')
+router.get('/statcast', function (req, res) {
+    res.render('index/statcast')
 });
 
 router.get('/tickets', function (req, res) {
