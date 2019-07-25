@@ -1,3 +1,5 @@
+<script src="/javascripts/passwordhide.js"></script>
+
 <form class="form-signin" method="POST" action="/api/users/edit-profile?_method=PUT">
 
  <label for="inputName" class="sr-only">Name</label>
@@ -13,7 +15,9 @@
 
  <br />
  <label for="inputPassword" class="sr-only">Password</label>
- <input type="text" id="inputPassword" class="form-control" placeholder="Password" name="password">
+ <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password">
+ <input type="checkbox" onclick="passwordHide()">Show Password
+        <br>
 
  <br />
 

@@ -11,6 +11,7 @@ let cartController = require('./controllers/cartController');
 
 router.get('/', cartController.getUserShoppingCart);
 
+
 router.post('/product', cartController.addProductToCart);
 
 router.delete('/remove', cartController.removeProduct);
@@ -70,7 +71,7 @@ router.post('/payment', (req, res, next) => {
                                 total: 0
                             }
                         }, (error, updated) => {
-                            if (updated) res.send('Payment done successfully :)')
+                            if (updated) res.render('cart/paydone')
                         })
                     }
                 ])
