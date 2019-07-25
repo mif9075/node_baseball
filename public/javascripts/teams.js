@@ -61,7 +61,7 @@ function init(){
                   <li>${items[item].venue_short}</li>
                   <li>${items[item].address}</li>
                   <li>${items[item].phone_number}</li>
-                  <li><a href="http://${items[item].website_url}"</a>${items[item].website_url}</li>
+                  <li><a href="http://${items[item].website_url}">${items[item].website_url}</a></li>
                 </ul>
               </div>
               </div>`
