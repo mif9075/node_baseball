@@ -42,7 +42,7 @@ function init(){
 
 
     function createCards(items) {
-        let cardDeck = document.querySelector(".card-deck > .card")
+        let cardDeck = document.querySelector(".card-deck")
         // console.log(items);
 
         let cards = ``
