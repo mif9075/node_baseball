@@ -37,14 +37,14 @@
       
       <% if ( current === 1 || isNaN(current) ) { %>
         <li class="page-item disabled">
-            <a class="page-link" href="/page/<%= previousPage %>" aria-label="Previous">
+            <a class="page-link" href="/api/product/page/<%= previousPage %>" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
               <span class="sr-only">Previous</span>
             </a>
           </li>
         <% } else { %>
           <li class="page-item">
-              <a class="page-link" href="/page/<%= previousPage %>" aria-label="Previous">
+              <a class="page-link" href="/api/product/page/<%= previousPage %>" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
                 <span class="sr-only">Previous</span>
               </a>
@@ -54,9 +54,9 @@
 
         <% for (let i = 1; i <= pages; i++) { %>
           <% if (i === current) { %>
-            <li class="page-item disabled"><a class="page-link" href="/page/<%= i %>"> <%= i %> </a></li>
+            <li class="page-item disabled"><a class="page-link" href="/api/product/page/<%= i %>"> <%= i %> </a></li>
           <% } else { %>
-            <li class="page-item"><a class="page-link" href="page/<%= i %>"> <%= i %> </a></li>
+            <li class="page-item"><a class="page-link" href="/api/product/page/<%= i %>"> <%= i %> </a></li>
           <% } %>
         <% } %>
         
@@ -64,14 +64,14 @@
 
       <% if ( current === pages - 1 ) { %>
         <li class="page-item disabled">
-            <a class="page-link" href="/page/<%= nextPage %>" aria-label="Next">
+            <a class="page-link" href="/api/product/page/<%= nextPage %>" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
               <span class="sr-only">Next</span>
             </a>
           </li>
         <% } else { %>
           <li class="page-item">
-              <a class="page-link" href="/page/<%= nextPage %>" aria-label="Next">
+              <a class="page-link" href="/api/product/page/<%= nextPage %>" aria-label="Next">
                 <span aria-hidden="true">&raquo;</span>
                 <span class="sr-only">Next</span>
               </a>

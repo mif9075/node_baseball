@@ -51,7 +51,8 @@ function init(){
 
         for (let item in items) {
             if (items.hasOwnProperty(item)) {
-                cards += `<div class="card mb-4 shadow-sm">
+                cards += `
+                <div class="card mb-4 shadow-sm">
                 <div class="card-header">
                 <h4 class="my-0 font-weight-normal">${items[item].name_display_full}</h4>
               </div>
@@ -62,7 +63,6 @@ function init(){
                   <li>${items[item].phone_number}</li>
                   <li><a href="http://${items[item].website_url}"</a>${items[item].website_url}</li>
                 </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
               </div>
               </div>`
                 
